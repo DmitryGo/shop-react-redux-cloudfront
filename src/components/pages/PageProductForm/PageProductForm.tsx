@@ -98,7 +98,12 @@ const Form = (props: FormikProps<FormikValues>) => {
   );
 }
 
-const emptyValues: any = ProductSchema.cast();
+const emptyValues: any = ProductSchema.cast({
+  id: '',
+  items: [],
+  address: {},
+  status: '',
+});
 
 export default function PageProductForm() {
   const history = useHistory();
